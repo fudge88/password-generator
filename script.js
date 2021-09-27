@@ -7,8 +7,20 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
+
+// get criteria
+// length of password
+
+//looping function
+
+// generate random password
+
+// criteria
+upperCase;
+lowerCase;
+specialCharacter;
+digit;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
