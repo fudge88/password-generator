@@ -10,24 +10,30 @@
 // }
 
 // get criteria
-const getCriteria () {
-return 
-}
+const getCriteria = function () {
+  const criteria = prompt("Choose Password length");
+  console.log(criteria);
+  return;
+};
 
 // validate
-const validateCriteria () {
-return
-}
+const validateCriteria = function () {
+  return;
+};
 
 // looping function
-const generatePassword () {
-return
-}
+const generatePassword = function () {
+  return;
+};
 
 // generate password
-const displayPassword () {
-return
-}
+const displayPassword = function () {
+  return;
+};
 
 // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
+
+// get user criteria
+
+getCriteria();
