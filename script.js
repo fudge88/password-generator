@@ -9,8 +9,8 @@
 //   passwordText.value = password;
 
 // Arrays
-const num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const special = [
+const numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const specialArray = [
   "!",
   "£",
   "$",
@@ -41,7 +41,7 @@ const special = [
   "`",
   "¬",
 ];
-const lowerCase = [
+const lowerCaseArray = [
   "a",
   "b",
   "c",
@@ -70,52 +70,81 @@ const lowerCase = [
   "z",
 ];
 
-const upperCase = lowerCase.join("").toUpperCase();
-const upperCase = upperCase.split("");
+// const upperCaseArray = lowerCaseArray.join("").toUpperCase();
+// const upperCaseArray = upperCaseArray.split("");
 
-// get criteria
-// get password length ***works****
-const getCriteria = function () {
-  const pwLength = Number(prompt("Choose Password length"));
-  // eliminate the possibility of a letter instead of a number
-  if (isNaN(pwLength)) {
-    return "Not a Valid number!";
-  } else {
-    return "you have chosen " + pwLength;
-  }
-};
+// // get criteria
+// // get password length ***works****
+// const getCriteria = function () {
+//   const pwLength = Number(prompt("Choose Password length"));
+//   // eliminate the possibility of a letter instead of a number
+//   if (isNaN(pwLength)) {
+//     return "Not a Valid number!";
+//   } else {
+//     return "you have chosen " + pwLength;
+//   }
+// };
 
 // length requirement function works
-function validate(pwLength) {
-  if (pwLength >= 0 && typeof pwLength === "number") {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function validate(pwLength) {
+//   if (pwLength >= 0 && typeof pwLength === "number") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 // length of password
-const pwLength = 9; //using constant this works
-if (validate(pwLength)) {
-  if (pwLength >= 8 && pwLength <= 128) {
-    console.log("correct length input");
-  } else {
-    console.log("Incorrect length input");
-  }
-}
+// const pwLength = 9; //using constant this works
+// if (validate(pwLength)) {
+//   if (pwLength >= 8 && pwLength <= 128) {
+//     console.log("correct length input");
+//   } else {
+//     console.log("Please input Password length between 8 -128");
+//   }
+// }
 
 // // do you want lowercase characters
-// function lowerCase() {}
+var upperCase = true;
+var lowerCase = true;
+var num = true;
+var special = true;
+
 // // do you want uppercase characters
-// function UpperCase() {}
+prompt("Do you want an Uppercase character");
+if (upperCase === true) {
+  console.log("you want an uppercase character");
+} else {
+  console.log("you NO NOT want an uppercase character");
+}
+
+prompt("Do you want an Lowercase character");
+if (lowerCase === true) {
+  console.log("you want an lowercase character");
+} else {
+  console.log("you NO NOT want an lowercase character");
+}
+
+prompt("Do you want an Numerical character");
+if (num === true) {
+  console.log("you want an numerical character");
+} else {
+  console.log("you NO NOT want an numerical character");
+}
+
+prompt("Do you want an Special character");
+if (special === true) {
+  console.log("you want an special character");
+} else {
+  console.log("you NO NOT want an special character");
+}
 // // do you want numeric characters
 // function num() {}
 // // do you want special characters
 // function special() {}
 
 // // looping function
-// const generatePassword = function () {
-//   return;
+
 // };
 
 // // generate password
