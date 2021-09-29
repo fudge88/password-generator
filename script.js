@@ -11,15 +11,20 @@
 
 // get criteria
 const getCriteria = function () {
-  const criteria = prompt("Choose Password length");
-  console.log(criteria);
-  return;
+  const pwLength = Number(prompt("Choose Password length"));
+  if (isNaN(pwLength)) {
+    return "Not a Valid number!";
+  } else {
+    return "you have chosen " + pwLength;
+  }
 };
+// eliminate the possibility of a letter instead of a number
+// g
 
-// validate
-const validateCriteria = function () {
-  return;
-};
+// do you want lowercase characters
+// do you want uppercase characters
+// do you want numeric characters
+// do you want special characters
 
 // looping function
 const generatePassword = function () {
@@ -36,4 +41,5 @@ const displayPassword = function () {
 
 // get user criteria
 
-getCriteria();
+const pwLength = getCriteria();
+console.log(pwLength);
