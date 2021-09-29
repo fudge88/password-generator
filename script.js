@@ -21,29 +21,48 @@ const getCriteria = function () {
   }
 };
 
-// do you want lowercase characters
-function lowerCase() {}
-// do you want uppercase characters
-function UpperCase() {}
-// do you want numeric characters
-function num() {}
-// do you want special characters
-function special() {}
+// length requirement function works
+function validate(pwLength) {
+  if (pwLength >= 0 && typeof pwLength === "number") {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-// looping function
-const generatePassword = function () {
-  return;
-};
+// length of password
+const pwLength = 9; //using constant this works
+if (validate(pwLength)) {
+  if (pwLength >= 8 && pwLength <= 128) {
+    console.log("correct length input");
+  } else {
+    console.log("Incorrect length input");
+  }
+}
 
-// generate password
-const displayPassword = function () {
-  return;
-};
+// // do you want lowercase characters
+// function lowerCase() {}
+// // do you want uppercase characters
+// function UpperCase() {}
+// // do you want numeric characters
+// function num() {}
+// // do you want special characters
+// function special() {}
 
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// // looping function
+// const generatePassword = function () {
+//   return;
+// };
 
-// get user criteria
+// // generate password
+// const displayPassword = function () {
+//   return;
+// };
 
-const pwLength = getCriteria();
-console.log(pwLength);
+// // Add event listener to generate button
+// // generateBtn.addEventListener("click", writePassword);
+
+// // get user criteria
+
+// const pwLength = getCriteria();
+// console.log(pwLength);
