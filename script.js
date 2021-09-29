@@ -105,10 +105,10 @@ const lowerCaseArray = [
 // }
 
 // // do you want lowercase characters
-var upperCase = true;
-var lowerCase = true;
-var num = true;
-var special = true;
+var upperCase = "";
+var lowerCase = "";
+var num = "";
+var special = "";
 
 // // do you want uppercase characters
 prompt("Do you want an Uppercase character");
