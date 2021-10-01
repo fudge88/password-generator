@@ -81,7 +81,7 @@ const getCriteria = function () {
   // variable is converted to a number and passed into a new variable called passwordLength
   const passwordLength = parseInt(x, 10);
   // checks if the value passed is a number, 
-  if (number.isNaN(passwordLength)) {
+  if (Number.isNaN(passwordLength)) {
     // if it is not a number the return the following message
     alert ("Please enter a valid number");
     // then break away
@@ -96,24 +96,22 @@ const getCriteria = function () {
  return;
 }
 
-// length of password
-// const pwLength = 9; //using constant this works
-// if (validate(pwLength)) {
-//   if (pwLength >= 8 && pwLength <= 128) {
-//     console.log("correct length input");
-//   } else {
-//     console.log("Please input Password length between 8 -128");
-//   }
-// }
-
-// // do you want lowercase characters
-var upperCase = "";
-var lowerCase = "";
-var num = "";
-var special = "";
-
-// // do you want uppercase characters
-
+// variable assigning each criteria the user can choose from
+// Confirmation box - pop up asking user for boolean data type in return 
+const lowerCase = confirm("Password to contain lowercase characters?");
+const upperCase = confirm("Password to contain uppercase characters?");
+const specialChar = confirm("Password to contain special characters?");
+const numChar = confirm("Password to contain numbers?");
+// created an object called 'attributes', holding all the variables the user will return
+const attributes = {
+  passwordLength: passwordLength,
+  lowerCase: lowerCase,
+  upperCase: upperCase,
+  specialChar: specialChar,
+  numChar: numChar,
+};
+return attributes;
+};
 
 const getUpperCase = function () {
   const upperCase = confirm("Would you like to use uppercase characters?");
