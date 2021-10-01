@@ -4,7 +4,7 @@ A fully functional password generator.
 
 #### You can view the deployed function by [clicking here!](https://fudge88.github.io/password-generator/)
 
-![portfolio demo](./assets/images/pwg1.PNG)
+![portfolio demo](./Assets/images/pwg1.PNG)
 
 ## Summary
 
@@ -19,19 +19,19 @@ to confirm the characteristics they wish their password to have such as:
 
 The below image demonstrates the input required from the user. The input box requests a numerical input, if the user inputs a letter or a special character, the user is alerted to input a valid number.
 
-![portfolio demo](./assets/images/pwg2.PNG)
+![portfolio demo](./Assets/images/pwg2.PNG)
 
 If the User inputs a number that is less then 8 or more then 128 (noted in the acceptance criteria), the following alert will pop up, returning the user back to the start.
 
-![portfolio demo](./assets/images/pwg5.PNG)
+![portfolio demo](./Assets/images/pwg5.PNG)
 
 The below image demonstrates a different style of input required from the user, the function then takes the responses from the user and merges the entire catalog of chosen characteristics together.
 
-![portfolio demo](./assets/images/pwg3.PNG)
+![portfolio demo](./Assets/images/pwg3.PNG)
 
 This is where the 'looping function' generates a random string of characters from the merged list (as described above), to form a random password.
 
-![portfolio demo](./assets/images/pwg4.PNG)
+![portfolio demo](./Assets/images/pwg4.PNG)
 
 ## User Story
 
