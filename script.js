@@ -122,33 +122,32 @@ const getUpperCase = function () {
   }
 };
 
-const getUpperCase = function () {
-  const = prompt("Do you want an Uppercase character");
+// function that generates the password according to user choices
+const generatePassword = function () {
+  // empty array that will hold the arrays the user wishes to use
+  const containerArray = [];
+  // if user has received error message finishes the function
+  if (!attributes) {
+    return;
+
+
   if (upperCase === true) {
     console.log("you want an uppercase character");
-  } else {
-    console.log("you NO NOT want an uppercase character");
-}
+  } 
 
-prompt("Do you want an Lowercase character");
 if (lowerCase === true) {
   console.log("you want an lowercase character");
-} else {
-  console.log("you NO NOT want an lowercase character");
-}
+} 
 
-prompt("Do you want an Numerical character");
+
 if (num === true) {
   console.log("you want an numerical character");
-} else {
-  console.log("you NO NOT want an numerical character");
 }
 
-prompt("Do you want an Special character");
+
 if (special === true) {
   console.log("you want an special character");
-} else {
-  console.log("you NO NOT want an special character");
+
 }
 // // do you want numeric characters
 // function num() {}
