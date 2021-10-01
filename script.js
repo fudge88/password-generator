@@ -83,20 +83,18 @@ const getCriteria = function () {
   // checks if the value passed is a number, 
   if (number.isNaN(passwordLength)) {
     // if it is not a number the return the following message
-    return "Please enter a valid number";
-  } else {
-    return "you have chosen " + pwLength;
-  }
-};
+    alert ("Please enter a valid number");
+    // then break away
+ return;
+}
 
-// length requirement function works
-// function validate(pwLength) {
-//   if (pwLength >= 0 && typeof pwLength === "number") {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+// length requirement error handler
+  if (passwordLength < 8  || passwordLength > 128) {
+    // if number is of an incorrect length the return the following message
+    alert ("Please enter a number between 8-128");
+    // then break away
+ return;
+}
 
 // length of password
 // const pwLength = 9; //using constant this works
