@@ -138,21 +138,20 @@ const generatePassword = function () {
   if (attributes.upperCase === true) {
     containerArray.push(...lowerCaseArray);
   } 
-
-if (attributes.lowerCase === true) {
-  containerArray.push(...lowerCaseArray);
-} 
-
-
-if (attributes.numChar === true) {
-  containerArray.push(...numArray);
-}
-
-
-if (attributes.specialChar === true) {
-  containerArray.push(...specialArray);
-
-}
+  if (attributes.lowerCase === true) {
+    containerArray.push(...lowerCaseArray);
+  } 
+  if (attributes.numChar === true) {
+    containerArray.push(...numArray);
+  }
+  if (attributes.specialChar === true) {
+    containerArray.push(...specialArray);
+  }
+  // if the user has NOT picked any attributes display error message
+  if (!containerArray.length) {
+    alert("You MUST choose at least one type of character");
+    return;
+  }
 // // do you want numeric characters
 // function num() {}
 // // do you want special characters
