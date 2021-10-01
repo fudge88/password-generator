@@ -129,24 +129,28 @@ const generatePassword = function () {
   // if user has received error message finishes the function
   if (!attributes) {
     return;
+  }
+// if the named attributes are selected, push into the empty array using the spread function
+// container array goes first as thats the container we want to fill, push is the function to add,
+// the ...is the spread function that we attach to the array we are forcing into a new array.
 
-
-  if (upperCase === true) {
-    console.log("you want an uppercase character");
+// if in the object attributes the variable of upperCase is present add the lowercase array to the empty array
+  if (attributes.upperCase === true) {
+    containerArray.push(...lowerCaseArray);
   } 
 
-if (lowerCase === true) {
-  console.log("you want an lowercase character");
+if (attributes.lowerCase === true) {
+  containerArray.push(...lowerCaseArray);
 } 
 
 
-if (num === true) {
-  console.log("you want an numerical character");
+if (attributes.numChar === true) {
+  containerArray.push(...numArray);
 }
 
 
-if (special === true) {
-  console.log("you want an special character");
+if (attributes.specialChar === true) {
+  containerArray.push(...specialArray);
 
 }
 // // do you want numeric characters
