@@ -122,16 +122,16 @@ const generatePassword = function () {
   // the ...is the spread function that we attach to the array we are forcing into a new array.
 
   // if in the object attributes the variable of upperCase is present add the lowercase array to the empty array
-  if (attributes.upperCase === true) {
+  if (attributes.upperCase) {
     containerArray.push(...upperCaseArray);
   }
-  if (attributes.lowerCase === true) {
+  if (attributes.lowerCase) {
     containerArray.push(...lowerCaseArray);
   }
-  if (attributes.numChar === true) {
+  if (attributes.numChar) {
     containerArray.push(...numArray);
   }
-  if (attributes.specialChar === true) {
+  if (attributes.specialChar) {
     containerArray.push(...specialArray);
   }
   // if the user has NOT picked any attributes display error message
@@ -165,6 +165,11 @@ const generatePassword = function () {
 // // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  // if password is undefined, show as nothing
+  if (!password) {
+    password = "";
+  }
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
